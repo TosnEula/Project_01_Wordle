@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
             if (userWord.length != 4 && !isReset)
             {
-                Toast.makeText(applicationContext, "Please type atleast 4 letters", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Please type at least 4 letters", Toast.LENGTH_SHORT).show()
                 counter--
             }
             else if (wordToGuess != userInputField.text.toString() && counter < 3)
@@ -121,6 +121,7 @@ class MainActivity : AppCompatActivity() {
                 submitBtn.text = "SUBMIT"
                 userAttemptsField.text = ""
                 submitBtn.setBackgroundColor((Color.parseColor("#2B8457")))
+                isReset = false
             }
 
         }
